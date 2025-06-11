@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kick-stream-notifier
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python -m pyppeteer install
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 7880098472:AAHw26Jr-MJ9o9KnttBLzDkkh92EM7LXZRU
